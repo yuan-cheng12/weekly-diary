@@ -6,82 +6,120 @@
   <title>本週周誌 (7/14 ~ 7/20)</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', '微軟正黑體', sans-serif;
-      background: #f0f2f5;
+      background: #f6f8fb;
+      margin: 0;
+      padding: 40px 20px;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
     }
-    .card {
-      background: white;
-      max-width: 720px;
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+    .container {
+      max-width: 800px;
+      background: #fff;
       padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
-    h1 {
-      font-size: 28px;
-      color: #1a237e;
-      margin-bottom: 10px;
+
+    .title {
+      font-size: 32px;
+      color: #263238;
+      background: #dff6f0;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
     }
+
     .date {
+      margin-top: 20px;
       font-size: 16px;
-      color: #555;
-      margin-bottom: 25px;
+      color: #455a64;
+      text-align: center;
     }
+
     section {
-      margin-bottom: 30px;
+      margin-top: 30px;
+      background: #f9fafa;
+      padding: 20px 25px;
+      border-left: 6px solid #4db6ac;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
+
     section h2 {
+      margin-top: 0;
       font-size: 20px;
-      color: #333;
-      border-left: 4px solid #3f51b5;
-      padding-left: 10px;
-      margin-bottom: 15px;
+      color: #212121;
     }
-    ul {
-      list-style: disc;
-      padding-left: 25px;
-      color: #333;
+
+    ol {
+      padding-left: 1.2em;
+      color: #37474f;
+      line-height: 1.6;
     }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      text-align: center;
+      color: #555;
+      background: #e1ecf4;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .footer a {
+      color: #0d47a1;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 600px) {
-      .card {
+      .container {
         padding: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>本週周誌</h1>
+  <div class="container">
+    <div class="title">本週周誌</div>
     <div class="date">週期：2025/7/14 ~ 2025/7/20</div>
 
     <section>
       <h2>◎ 紀錄</h2>
-      <ul>
+      <ol>
         <li>複習 FPGA 及 Quartus 用法</li>
         <li>學習 DDS 基礎知識</li>
         <li>實際操作 DDS 範例（小梅哥）</li>
-      </ul>
+      </ol>
     </section>
 
     <section>
       <h2>◎ 遇到的問題</h2>
-      <ul>
+      <ol>
         <li>未能正常生成弦波、方波及三角波</li>
-      </ul>
+      </ol>
     </section>
 
     <section>
       <h2>◎ 下週預計項目</h2>
-      <ul>
+      <ol>
         <li>解決本週未解決問題</li>
         <li>繼續查找相關資料研讀</li>
-      </ul>
+      </ol>
     </section>
+
+    <div class="footer">
+      <a href="https://www.bilibili.com/video/BV1Qp4y1k7TV/" target="_blank">
+        ▶ 小梅哥 DDS 教學影片（點我觀看）
+      </a>
+    </div>
   </div>
 </body>
 </html>
