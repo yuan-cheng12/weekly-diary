@@ -11,11 +11,11 @@
       margin: 0;
       padding: 40px 20px;
       display: flex;
-      justify-content: left;
+      justify-content: center;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 600px;
       width: 100%;
       background: #fff;
       padding: 30px;
@@ -23,107 +23,48 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
-    .title {
-      font-size: 36px;
+    h1 {
+      font-size: 32px;
       color: #263238;
-      background: #dff6f0;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: left;
-      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    .date {
-      margin-top: 20px;
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #e3f2fd;
+      margin-bottom: 12px;
+      padding: 14px 20px;
+      border-radius: 12px;
       font-size: 18px;
-      color: #455a64;
-      text-align: left;
+      transition: background 0.3s;
     }
 
-    section {
-      margin-top: 30px;
-      background: #f9fafa;
-      padding: 25px 30px;
-      border-left: 6px solid #4db6ac;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    li:hover {
+      background: #bbdefb;
     }
 
-    section h2 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #212121;
-    }
-
-    ol {
-      padding-left: 1.4em;
-      color: #37474f;
-      font-size: 17px;
-      line-height: 1.7;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 16px;
-      text-align: left;
-      color: #555;
-      background: #e1ecf4;
-      padding: 18px;
-      border-radius: 10px;
-    }
-
-    .footer a {
+    a {
       color: #0d47a1;
       text-decoration: none;
     }
 
-    .footer a:hover {
+    a:hover {
       text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        padding: 20px;
-        max-width: 95%;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="title">專題週誌</div>
-    <div class="date">週期：2025/7/14 ~ 2025/7/20</div>
-
-    <section>
-      <h2>◎ 紀錄</h2>
-      <ol>
-        <li>複習 FPGA 及 Quartus 用法</li>
-        <li>學習 DDS 基礎知識</li>
-        <li>實際操作 DDS 範例（小梅哥）</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>◎ 遇到的問題</h2>
-      <ol>
-        <li>未能正常生成弦波、方波及三角波</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>◎ 下週預計項目</h2>
-      <ol>
-        <li>解決本週未解決問題</li>
-        <li>繼續查找相關資料研讀</li>
-      </ol>
-    </section>
-
-    <div class="footer">
-      <a href="https://www.bilibili.com/video/BV1Qp4y1k7TV/" target="_blank">
-        ▶ 小梅哥 DDS 教學影片（點我觀看）
-      </a>
-    </div>
+    <h1>🗓️ 專題週誌</h1>
+    <ul>
+      <li><a href="2025-07-21.html">📘 2025/07/21 ~ 07/27</a></li>
+      <li><a href="2025-07-14.html">📘 2025/07/14 ~ 07/20</a></li>
+    </ul>
   </div>
 </body>
 </html>
-
