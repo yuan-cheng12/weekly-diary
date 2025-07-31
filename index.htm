@@ -40,10 +40,19 @@
       margin-right: 15px;
       text-decoration: none;
       font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: background 0.2s ease;
     }
 
     nav a:hover {
       color: #a971f7;
+      background-color: #1f2a36;
+    }
+
+    nav a.active {
+      background-color: #a971f7;
+      color: #fff;
     }
 
     iframe {
@@ -68,24 +77,62 @@
 </head>
 <body>
   <h1>🗓️ 專題週誌</h1>
-  <nav>
-    <a href="#" onclick="loadPage('714-20.html')">第1週</a>
-    <a href="#" onclick="loadPage('721-27.html')">第2週</a>
-    <a href="#" onclick="loadPage('728-83.html')">第3週</a>
-    <a href="#" onclick="loadPage('804-10.html')">第4週</a>
-    <a href="#" onclick="loadPage('811-17.html')">第5週</a>
-    <a href="#" onclick="loadPage('818-24.html')">第6週</a>
-    <a href="#" onclick="loadPage('825-31.html')">第7週</a>
-    <a href="#" onclick="loadPage('901-07.html')">第8週</a>
+  <nav id="nav">
+    <a href="#" data-page="714-20.html" data-start="2025-07-14" data-end="2025-07-20">第1週</a>
+    <a href="#" data-page="721-27.html" data-start="2025-07-21" data-end="2025-07-27">第2週</a>
+    <a href="#" data-page="728-83.html" data-start="2025-07-28" data-end="2025-08-03">第3週</a>
+    <a href="#" data-page="804-10.html" data-start="2025-08-04" data-end="2025-08-10">第4週</a>
+    <a href="#" data-page="811-17.html" data-start="2025-08-11" data-end="2025-08-17">第5週</a>
+    <a href="#" data-page="818-24.html" data-start="2025-08-18" data-end="2025-08-24">第6週</a>
+    <a href="#" data-page="825-31.html" data-start="2025-08-25" data-end="2025-08-31">第7週</a>
+    <a href="#" data-page="901-07.html" data-start="2025-09-01" data-end="2025-09-07">第8週</a>
   </nav>
 
-  <iframe id="contentFrame" src="728-83.html"></iframe>
+  <iframe id="contentFrame" src=""></iframe>
 
   <script>
-    function loadPage(filename) {
-      document.getElementById('contentFrame').src = filename;
+    const iframe = document.getElementById('contentFrame');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function setActive(link) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
     }
+
+    function loadPage(filename, link) {
+      iframe.src = filename;
+      setActive(link);
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const page = link.getAttribute('data-page');
+        loadPage(page, link);
+      });
+    });
+
+    function autoSelectWeek() {
+      const today = new Date();
+      let matched = false;
+
+      navLinks.forEach(link => {
+        const startDate = new Date(link.dataset.start);
+        const endDate = new Date(link.dataset.end);
+        if (today >= startDate && today <= endDate) {
+          loadPage(link.dataset.page, link);
+          matched = true;
+        }
+      });
+
+      // fallback：若今天不在任何週期中，就預設載入第1週
+      if (!matched) {
+        const defaultLink = navLinks[0];
+        loadPage(defaultLink.dataset.page, defaultLink);
+      }
+    }
+
+    autoSelectWeek();
   </script>
 </body>
 </html>
-
