@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <!DOCTYPE html>
-<html lang="zh-Hant">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> 本週週誌 </title>
+  <title>本週週誌</title>
   <style>
     body {
       font-family: 'Segoe UI', '微軟正黑體', sans-serif;
@@ -29,32 +26,36 @@
 
     .title {
       font-size: 32px;
-      color: #58a6ff;
+      color: #d59aff;
       background: #1f2a36;
       padding: 20px;
       border-radius: 12px;
       font-weight: bold;
+      text-align: center;
     }
 
     .date {
       margin-top: 20px;
       font-size: 18px;
-      color: #8b949e;
+      color: #d0d7de;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 20px;
+      color: #f3d4ff;
+      border-bottom: 1px solid #3c3f45;
+      padding-bottom: 6px;
     }
 
     section {
-      margin-top: 30px;
+      margin-top: 12px;
       background: #21262d;
-      padding: 25px 30px;
-      border-left: 6px solid #58a6ff;
+      padding: 20px 25px;
+      border-left: 6px solid #c084fc; /* 紫色線條 */
       border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(56,139,253,0.05);
-    }
-
-    section h2 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #f3d4ff;
+      box-shadow: 0 2px 6px rgba(128, 0, 255, 0.08);
     }
 
     ol {
@@ -71,22 +72,41 @@
       background: #1f2a36;
       padding: 18px;
       border-radius: 10px;
+      text-align: left;
     }
 
     .footer a {
-      color: #79c0ff;
+      color: #c084fc;
       text-decoration: none;
     }
 
     .footer a:hover {
-      color: #a5d6ff;
+      color: #e1b9ff;
       text-decoration: underline;
     }
 
+    /* ✅ 響應式設計：手機友善 */
     @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
       .container {
         padding: 20px;
-        max-width: 95%;
+        max-width: 100%;
+        box-shadow: none;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      ol {
+        font-size: 15px;
       }
     }
   </style>
@@ -95,11 +115,12 @@
   <div class="container">
     <div class="title">本週週誌</div>
     <div class="date">週期：2025/7/28 ~ 2025/8/3</div>
+
     <h2>◎ 紀錄</h2>
     <section>
       <ol>
         <li>研讀相關資料</li>
-        <li>熟悉Quartus II 13.1版本的軟體操作</li>
+        <li>熟悉 Quartus II 13.1 版本的軟體操作</li>
         <li>實際模擬 (波形產生器)</li>
       </ol>
     </section>
@@ -107,12 +128,12 @@
     <h2>◎ 遇到的問題</h2>
     <section>
       <ol>
-        <li>不太熟悉Quartus II 13.1版本的軟體操作</li>
-        <li>RTL simulation 顯示不出波形(已解決) </li>
+        <li>不太熟悉 Quartus II 13.1 版本的軟體操作</li>
+        <li>RTL simulation 顯示不出波形（已解決）</li>
       </ol>
     </section>
 
-     <h2>◎ 下週預計項目</h2>
+    <h2>◎ 下週預計項目</h2>
     <section>
       <ol>
         <li>解決本週未解決問題</li>
@@ -122,7 +143,7 @@
 
     <div class="footer">
       <a href="https://www.bilibili.com/video/BV1Qp4y1k7TV/?vd_source=5e70fa5bac3f1950730340d24dbcf76a&p=2&spm_id_from=333.788.videopod.episodes" target="_blank">
-        🔗 DDS原理講解與實現B-小梅哥
+        🔗 DDS 原理講解與實現 - 小梅哥
       </a>
     </div>
   </div>
