@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>本週週誌</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', '微軟正黑體', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background-color: #161b22;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(56, 139, 253, 0.15);
+    }
+
+    .title {
+      font-size: 32px;
+      color: #d59aff;
+      background: #1f2a36;
+      padding: 20px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .date {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #d0d7de;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #f3d4ff;
+      border-bottom: 1px solid #3c3f45;
+      padding-bottom: 6px;
+    }
+
+    section {
+      margin-top: 12px;
+      background: #21262d;
+      padding: 20px 25px;
+      border-left: 6px solid #c084fc; /* 紫色線條 */
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(128, 0, 255, 0.08);
+    }
+
+    ol {
+      padding-left: 1.4em;
+      color: #d0d7de;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #8b949e;
+      background: #1f2a36;
+      padding: 18px;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .footer a {
+      color: #c084fc;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #e1b9ff;
+      text-decoration: underline;
+    }
+
+    /* ✅ 響應式設計：手機友善 */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      .container {
+        padding: 20px;
+        max-width: 100%;
+        box-shadow: none;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      ol {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">本週週誌</div>
+    <div class="date">週期：2025/10/20 ~ 2025/10/26</div>
+
+    <h2>◎ 紀錄</h2>
+    <section>
+      <ol>
+        <li> 成功解決Altera USB-Blaster無法讀取的問題。</li>
+        <li>接PIN腳</li>
+      </ol>
+    </section>
+
+     <h2>◎ 相關圖片</h2>
+    <section>
+      <ol>
+        Altera USB-Blaster成功讀取<br>
+       <img src="find_usb.png"  style="max-width: 100%; height: auto;" /><br>
+         程式燒入成功<br>
+      <img src="FPGA_3.png"  style="max-width: 100%; height: auto;" /><br>
+    </section>
+    </section>
+    <h2>◎ 下週預計項目</h2>
+    <section>
+      <ol>
+        <li>整理專題目前進度。</li>
+      </ol>
+    </section>
+  </div>
+</body>
+</html>
